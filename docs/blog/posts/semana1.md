@@ -7,7 +7,7 @@ authors:
 
 # Semana 1 — Chegada do SystemCore
 
-A espera finalmente terminou, o novo **SystemCore** chegou para as equipes de FRC, e já estamos explorando todos os detalhes técnicos. Para quem  , fica claro que o SystemCore não é apenas uma evolução pequena, a gente vai ter grandes mudanças em software e hardware daqui pra frente.
+A espera finalmente terminou, o novo **SystemCore** chegou para as equipes de FRC que estão participando do processos de testes Alfa (Vocês podem ler mais sobre [neste blog](https://community.firstinspires.org/systemcore-alpha-testing-first-wave)), e já estamos explorando todos os detalhes técnicos. Está claro que o SystemCore da Limelight não é apenas uma evolução pequena, a gente vai ter grandes mudanças em software e hardware daqui pra frente.
 <!-- more -->
 
 <p align="center">
@@ -16,16 +16,16 @@ A espera finalmente terminou, o novo **SystemCore** chegou para as equipes de FR
 
 ## Para quem não conhece: o que é o SystemCore?
 
-O **SystemCore** é o novo módulo computacional desenvolvido pela Limelight, projetado para ser o “cérebro central” de robôs de alta performance, como os usados em competições de robótica (por exemplo, FIRST Robotics Competition - FRC).
+O **SystemCore** é o novo módulo computacional desenvolvido pela Limelight, projetado para ser o “cérebro central” dos robôs da _FIRST Tech Challenge_ e _FIRST Robotics Competition_. Substituindo os amados roboRIO e Control Hub.
 
 Na prática, ele funciona como uma central unificada que combina:
 
 - **Processamento de alto desempenho**: baseado em arquitetura ARM moderna, capaz de rodar algoritmos de visão e controle em tempo real no próprio módulo, sem depender de co-processadores externos. Em comparação, o **roboRIO**, é muito mais limitado em capacidade de processamento geral e praticamente inviável para tarefas pesadas de visão computacional por exemplo.
 - **Gerenciamento de entradas e saídas (I/O)**: possibilita controlar sensores, atuadores, LEDs e outros dispositivos diretamente, com latência mínima.
-- **Conectividade ampla**: inclui interfaces CAN FD, Ethernet, Wi-Fi, Bluetooth, USB e PCIe, permitindo integração com praticamente qualquer subsistema do robô.
+- **Conectividade ampla**: inclui 5 interfaces CAN FD, Ethernet, Wi-Fi, Bluetooth, USB e PCIe, permitindo integração com praticamente qualquer subsistema do robô.
 - **Sensores embarcados**: como a IMU (unidade de medição inercial), essencial para navegação autônoma e estabilização.
 
-O grande diferencial do SystemCore é a melhora de desempenho e novas tecnologias comparado com o roboRIO.
+O grande diferencial do SystemCore é a melhora de desempenho e novas tecnologias comparado com o roboRIO e o Control Hub
 
 
 
@@ -39,11 +39,11 @@ Complementando a arquitetura principal, existe um subsistema em tempo real basea
 
 O SystemCore foi projetado como um verdadeiro hub para sistemas robóticos avançados:
 
-- **5 interfaces CAN FD**, suportando até 8 Mbps, com terminação integrada de 120 Ω.
+- **5 interfaces CAN FD**, suportando até 8 Mbps, com terminação integrada de 120 Ω. (SIM, 5 BARRAMENTOS DE REDE CAN PARALELOS!!!!!!!!!!!)
 - **4 portas USB 3.0**, para conexão de câmeras, módulos de expansão ou armazenamento.
-- **Ethernet Gigabit**, Wi-Fi dual-band (2.4 e 5 GHz) e Bluetooth 5.0.
-- **Porta PCIe M.2**, permitindo futuras expansões.
-- **Porta BRIDGE**, que integra alimentação e CAN em um único cabo, pensada para integração com o MotionCore.
+- **Ethernet Gigabit**, Wi-Fi dual-band (2.4 e 5 GHz) e Bluetooth 5.0. Principalmente para ser utilizada pela FTC e para debug da FRC, ela não vai subsitituir o rádio VH-109 da FRC em quadra.
+- **Porta PCIe M.2**, permitindo futuras expansões. Como o já utilizado por equipes de FRC, [Halio - 8](https://stemos.com.br/produto/11010293/), que permite o processamento de imagem utilizando IA.
+- **Porta BRIDGE**, que integra alimentação e CAN em um único cabo, pensada para integração com o MotionCore (Exclusivo para uso das equipes de FTC).
 
 ## Entradas e saídas flexíveis
 
@@ -54,6 +54,7 @@ O módulo possui **6 portas I/O** configuráveis em tempo real, suportando:
 - Entradas analógicas (12-bit ADC, 0 a 3.3 V)
 - LEDs endereçáveis* 
 - Decodificação de quadratura*
+- **Aqui temos uma mudança importante para as equipes de FRC, as portas I/O do SystemCore trabalham em 3.3V, não em 5V como no roboRIO**
 
 \* Algumas funções estão em fase final de validação.
 
@@ -61,7 +62,7 @@ O ADC atinge taxas de amostragem de até 500 kS/s, com alta precisão e linearid
 
 ## IMU integrada
 
-A unidade de medição inercial (IMU) fornece dados a 400 Hz, incluindo quaternions, aceleração (±4 G a ±32 G) e giroscópio (±125°/s a ±4000°/s). Esses recursos oferecem novas possibilidades para estratégias de navegação e estabilização avançada.
+A unidade de medição inercial (IMU) fornece dados a 400 Hz, incluindo quaternions, aceleração (±4 G a ±32 G) e giroscópio (±125°/s a ±4000°/s). Esses recursos oferecem novas possibilidades para estratégias de navegação e estabilização avançada. Eliminando a necessidade de sensores externos como o NavX e Pidgeon 2.0, enquanto diminui o tempo de resposta do sensor.
 
 ## Gerenciamento de energia e robustez
 
@@ -75,7 +76,9 @@ A gente já recebeu o nosso SystemCore e iniciou os testes preliminares. Prepara
 
 ## Conclusão
 
-O SystemCore marca uma nova fase no controle embarcado para robôs de competição. Combinando processamento potente, conectividade abrangente e foco em confiabilidade, abre espaço para soluções mais ambiciosas e maior visibilidade sobre a performance do robô em tempo real.
+O SystemCore marca uma nova fase no controle embarcado para robôs da _FIRST_. Combinando processamento potente, conectividade abrangente e foco em confiabilidade, abre espaço para soluções mais ambiciosas e maior visibilidade sobre a performance do robô em tempo real.
 
 Seguiremos compartilhando atualizações detalhadas sobre cada etapa dos nossos testes. Acompanhe o blog para acompanhar as descobertas e os avanços no uso deste novo sistema.
+
+Tem algo específico que sua equipe quer saber? Nos chamem no insta, ou comentem aqui!
 
