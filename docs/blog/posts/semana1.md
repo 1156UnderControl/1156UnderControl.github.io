@@ -70,6 +70,9 @@ O SystemCore opera em uma faixa ampla de tensão (5 V a 26 V), com arquitetura b
 
 O design físico reforça a durabilidade: base em alumínio, topo em ABS/PC, revestimento conformal na placa principal e conectores projetados para reduzir a entrada de poeira e detritos, atendendo às condições mais exigentes em campo.
 
+- Mais informações técnicas preliminares sobre o systemcore, podem ser encontradas [aqui.](https://downloads.limelightvision.io/documents/systemcore_specifications_june15_2025_alpha.pdf)
+- Todas as atualizações sobre o progresso da fase de testes Alfa, assim como mais informações sobre o systemcore, estão no [Github do Systemcore.](https://github.com/wpilibsuite/SystemCoreTesting)
+
 ## Recebimento e primeiros passos na 1156
 
 A gente já recebeu o nosso SystemCore e iniciou os testes preliminares. Preparamos uma lista detalhada de verificações para avaliar desempenho térmico, estabilidade do CAN, resposta das I/Os em condições reais e integração com nossos subsistemas de movimento. Nas próximas semanas, publicaremos os primeiros resultados e análises práticas.
