@@ -24,7 +24,7 @@ Na prática, ele funciona como uma central unificada que combina:
 
 O grande diferencial do SystemCore é a melhora de desempenho e novas tecnologias comparado com o roboRIO e o Control Hub
 
-
+![Description](assets/systemcoreroborio2.JPG)
 
 ## Arquitetura e processamento
 
@@ -80,5 +80,11 @@ O SystemCore marca uma nova fase no controle embarcado para robôs da _FIRST_. C
 
 Seguiremos compartilhando atualizações detalhadas sobre cada etapa dos nossos testes. Acompanhe o blog para acompanhar as descobertas e os avanços no uso deste novo sistema.
 
+![Description](assets/systemcoreroborio3.JPG)
+
 Tem algo específico que sua equipe quer saber? Nos chamem no insta, ou comentem aqui!
+
+Deixe sua reação ai também :)
+
+---
 
