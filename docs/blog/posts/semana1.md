@@ -9,10 +9,7 @@ authors:
 
 A espera finalmente terminou, o novo **SystemCore** chegou para as equipes de FRC que estão participando do processos de testes Alfa (Vocês podem ler mais sobre [neste blog](https://community.firstinspires.org/systemcore-alpha-testing-first-wave)), e já estamos explorando todos os detalhes técnicos. Está claro que o SystemCore da Limelight não é apenas uma evolução pequena, a gente vai ter grandes mudanças em software e hardware daqui pra frente.
 <!-- more -->
-
-<p align="center">
-  <img src="assets/blog/6384c47661fd71a71b7448fba9af73fabbe483d8_2_666x500.png" alt="Render interno do SystemCore" width="800"/>
-</p>
+![Description](assets/systemcore1.png)
 
 ## Para quem não conhece: o que é o SystemCore?
 
